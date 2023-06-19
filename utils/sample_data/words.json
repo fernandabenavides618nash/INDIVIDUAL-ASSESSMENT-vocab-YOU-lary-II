@@ -1,0 +1,34 @@
+{
+  "-NX6rsWcpxEzr50Dqkf5": {
+    "definition": "HTML elements can have one or more classes, separated by spaces. You can style elements using CSS by selecting them with their classes.",
+    "firebaseKey": "-NX6rsWcpxEzr50Dqkf5",
+    "language": "HTML",
+    "time": "",
+    "title": "Class",
+    "uid": "EktwMYLKYVY5gkstlaHmwyYaRbM2"
+  },
+  "-NX6swBZBEFnyzVSgtFn": {
+    "definition": "A two-dimensional array is an array within an array. If you fill this array with another array you get a three-dimensional array and so on.",
+    "firebaseKey": "-NX6swBZBEFnyzVSgtFn",
+    "language": "Javascript",
+    "time": "",
+    "title": "Multi-dimensional Arrays",
+    "uid": ""
+  },
+  "-NX6tMWqlIBL8qnuEpe9": {
+    "definition": "Prints text to the console. Useful for debugging.",
+    "firebaseKey": "-NX6tMWqlIBL8qnuEpe9",
+    "language": "Javascript",
+    "time": "",
+    "title": "console.log",
+    "uid": ""
+  },
+  "-NX6tfnNMsOnfYr_jzZ_": {
+    "definition": "The padding is the spacing between the content and the border (edge of the element.). We can adjust this value with CSS to move the border closer to or farther from the content. Here, the div with id box will get 10px of padding all around it.",
+    "firebaseKey": "-NX6tfnNMsOnfYr_jzZ_",
+    "language": "CSS",
+    "time": "",
+    "title": "Padding",
+    "uid": ""
+  }
+}
