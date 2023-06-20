@@ -1,9 +1,8 @@
 import client from '../utils/client';
 // API CALLS FOR WORDS
-// PROMISES GO ON THIS PAGE
 
 const endpoint = client.databaseURL;
-// const endpoint = 'https://vocab-you-lary-c91e1-default-rtdb.firebaseio.com/';
+// const endpoint = 'https://vocabulary-ii-default-rtdb.firebaseio.com/';
 
 // CREATE WORD
 const createWord = (payload) => new Promise((resolve, reject) => {
@@ -90,12 +89,6 @@ const filterHtmlWords = (uid) => new Promise((resolve, reject) => {
     .then((data) => {
       if (data) {
         const html = Object.values(data);
-        // const html can be ommitted and simply combined into "filteredWords" function below to save line space"
-        // example instead of using an if statement:
-        // const filteredWords = Object.values(data).filter((obj) => obj.vocabLanguage === 'HTML');
-        // resolve(filteredWords);
-        // })
-        // .catch(reject);
         const filteredWords = html.filter((item) => item.language === 'HTML');
         resolve(filteredWords);
       } else {
@@ -117,12 +110,6 @@ const filterCssWords = (uid) => new Promise((resolve, reject) => {
     .then((data) => {
       if (data) {
         const css = Object.values(data);
-        // const css can be ommitted and simply combined into "filteredWords" function below to save line space"
-        // example instead of using an if statement:
-        // const filteredWords = Object.values(data).filter((obj) => obj.vocabLanguage === 'CSS');
-        // resolve(filteredWords);
-        // })
-        // .catch(reject);
         const filteredWords = css.filter((item) => item.language === 'CSS');
         resolve(filteredWords);
       } else {
@@ -144,12 +131,6 @@ const filterJsWords = (uid) => new Promise((resolve, reject) => {
     .then((data) => {
       if (data) {
         const javascript = Object.values(data);
-        // const javascript can be ommitted and simply combined into "filteredWords" function below to save line space"
-        // example instead of using an if statement:
-        // const filteredWords = Object.values(data).filter((obj) => obj.vocabLanguage === 'Javascript');
-        // resolve(filteredWords);
-        // })
-        // .catch(reject);
         const filteredWords = javascript.filter((item) => item.language === 'Javascript');
         resolve(filteredWords);
       } else {
@@ -169,20 +150,3 @@ export {
   filterHtmlWords,
   filterCssWords
 };
-
-// NOTES**
-// Altermate single filter function combining all filters into one:
-// const filteredWords = (uid, lang) => new Promise((resolve, reject) => {
-//   fetch(`${endpoint}/entries.json?orderBy="uid"&equalTo="${uid}"`, {
-//     method: 'GET',
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//   })
-//     .then((response) => response.json())
-//     .then((data) => {
-//       const filterLang = Object.values(data).filter((item) => item.language === lang);
-//       resolve(filterLang);
-//     })
-//     .catch(reject);
-// });
