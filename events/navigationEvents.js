@@ -1,4 +1,3 @@
-// REWORK
 import { signOut } from '../utils/auth';
 import {
   getWords, filterJsWords, filterHtmlWords, filterCssWords
